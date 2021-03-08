@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         initControls()
         initEvents()
     }
-
     private fun initEvents() {
 
     }

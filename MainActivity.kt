@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
             NoteViewModel.NoteViewModelFactory(this.application)
         )[NoteViewModel::class.java]
     }
-/*    private val adapter: NoteAdapter by lazy {
+    /*  private val adapter: NoteAdapter by lazy {
         NoteAdapter(this@MainActivity, onItemClick, onItemDelete)
     }*/
 

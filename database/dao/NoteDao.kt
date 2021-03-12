@@ -21,5 +21,10 @@ interface NoteDao {
    /* @Query("select * from note_table where title_col=:title")
     fun getNoteByTitle(title: String): LiveData<List<Note>>*/
 
+   @Query("delete from note_table")
+   suspend fun deleteAllNote()
+
+   @Insert
+   suspend fun insertAllNote(notes: List<Note>)
 
 }

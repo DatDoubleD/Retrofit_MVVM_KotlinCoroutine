@@ -1,4 +1,4 @@
-package com.example.noteapp.ui.note
+package com.example.noteapp.ui.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -17,6 +17,7 @@ class NoteAdapter(
     private val onClick: (Note) -> Unit,
     private val onDelete: (Note) -> Unit
 ) : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
+
     private var notes: List<Note> = listOf()
 
     inner class NoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -24,7 +25,9 @@ class NoteAdapter(
         private val txtDes: TextView = itemView.findViewById(R.id.txt_item_des)
         private val btnDelete: ImageView = itemView.findViewById(R.id.btn_delete_note)
         private val layoutItem: ConstraintLayout = itemView.findViewById(R.id.layout_item)
+/*
         private val imgNote:ImageView = itemView.findViewById(R.id.img_note)
+*/
 
         fun onBind(note: Note) {
             txtDes.text = note.description
